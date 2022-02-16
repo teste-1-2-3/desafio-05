@@ -1,0 +1,163 @@
+@font-face {
+    font-family: 'Poppins-Black';
+    src: url('fonts/Poppins-Black.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('fonts/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url('fonts/Poppins-SemiBold.ttf');
+}
+
+:root {
+    --dark: #1A4855;
+    --bright: #628E75;
+    --content: #F9F9F9;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+body {
+    background-image: linear-gradient(var(--bright), var(--dark));
+    background-attachment: fixed;
+}
+
+header {
+    padding: 0rem 1rem;
+}
+
+header > section {
+    padding: 1rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    padding: 0rem 2rem;
+    color: white;
+    font-family: 'Poppins-Bold', sans-serif;
+}
+
+main h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
+    font-weight: bold;
+    font-family: 'Poppins-Bold';
+}
+
+main h2 {
+    font-size: 1.3rem;
+}
+
+main p {
+    font-family: 'Poppins-Regular';
+    font-size: 0.8rem;
+}
+
+.logo {
+    height: 50px;
+}
+
+.ilustracao {
+    width: max-content;
+    margin: auto;
+}
+
+.ilustracao > img{
+    width: 250px;
+}
+
+.social_networks > figure > img{
+    width: 20px;
+    margin: 0rem 0.5rem;
+}
+
+input[type='button'] {
+    border: none;
+    background: transparent;
+    padding: 0.7rem 3rem;
+    font-family: 'Poppins-Bold';
+    color: white;
+}
+
+.watch {
+    display: flex;
+    margin-top: 2rem;
+}
+
+#watch_now {
+    clip-path: polygon(0% 100%, 10% 0%, 100% 0%, 90% 100%);
+    background: var(--bright);
+}
+
+#watch_trailer {
+    clip-path: polygon(0% 100%, 10% 0%, 100% 0%, 90% 100%);
+    background: var(--dark);
+}
+
+.watch_trailer_container {
+    clip-path: polygon(0% 100%, 10% 0%, 100% 0%, 90% 100%);
+    background: var(--bright);
+    padding: 1px 2px;
+    display: none;
+}
+
+@media (min-width: 1080px) {
+    body {
+        background-image: linear-gradient(140deg, var(--bright), var(--dark));
+    }
+    header {
+        margin-bottom: 4rem;
+    }
+
+    header > section {
+        justify-content: space-around;
+    }
+
+    main {
+        width: 80%;
+        margin: auto;
+        margin-top: 10%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    main hgroup {
+        width: 30%;
+    }
+
+    main section {
+        width: max-content;
+    }
+
+    main figure {
+        position: absolute;
+        right: 0;
+        top: 20%;
+    }
+
+    .watch_trailer_container {
+        display: block;
+    }
+}
